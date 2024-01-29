@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>City96</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="default.css">
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+	<!-- SM TAGS -->
+	<meta name="title" content="City96">
+	<meta property="og:title" content="City96">
+	<meta name="twitter:title" content="City96">
+	<meta name="description" content="Links/contact info for City96">
+	<meta property="og:description" content="Links/contact info for City96">
+	<meta name="twitter:description" content="Links/contact info for City96">
+	<meta name="theme-color" content="#343434">
+	<meta property="og:url" content="https://v100s.net/">
+</head>
+<body>
+<div id="main">
+	<div id="pfp">
+		<img src="media/pfp.png" alt="pfp" style="width:100%">
+		<div class="pfp_bgbox" style="animation: rot-right 64s linear infinite;"></div>
+		<div class="pfp_bgbox" style="animation: rot-left 64s linear infinite;"></div>
+	</div>
+	<div id="links" class="shade">
+		<h1>City96</h1>
+		<div class="link">
+			<a href="https://city.v100s.net/">Blog</a>
+			<p class="info shade"> > Articles, info about releases, RSS </p>
+		</div>
+		<div class="link">
+			<a href="https://www.pixiv.net/en/users/98495633">Pixiv</a>
+			<p class="info shade"> > Art, if/when I actually upload it </p>
+		</div>
+		<div class="link">
+			<a href="mailto:city@v100s.net">Email</a>
+			<p class="info shade"> > Official communications, offers, etc </p>
+		</div>
+		<div class="link">
+			<a href="https://github.com/city96">Github</a>
+			<p class="info shade"> > Projects, code, whatever I'm working on </p>
+		</div>
+		<div class="link">
+			<a href="https://twitter.com/City96p">Twitter</a>
+			<p class="info shade"> > Rarely used, will read DMs </p>
+		</div>
+		<div class="link">
+			<a href="" id="dc_url">Discord</a>
+			<p class="info shade"> > Progress updates, direct chat, user:city96 </p>
+		</div>
+		<div class="link">
+			<a href="https://huggingface.co/city96">Huggingface</a>
+			<p class="info shade"> > Model files, hosted demos </p>
+		</div>
+	</div>
+</div>
+<script>
+	var dc_url = "https://discord.gg/WteRAPCdUY";
+	var dc_msg = "This server is mostly focused on anime image gen. It may also have instances of strong language. Continue to invite link?";
+
+	// More info before continuing to link
+	function LinkConfirm(e) {
+		if (!window.confirm(dc_msg)) {
+			e.preventDefault();
+		}
+	}
+
+	// Set link from auto variable + add event for click
+	document.addEventListener("DOMContentLoaded", function() {
+		let dc_link = document.getElementById("dc_url");
+		dc_link.href = dc_url;
+		dc_link.addEventListener('click', LinkConfirm, false);
+	})
+</script>
+</body>
+</html>
